@@ -55,4 +55,4 @@ python generating_CAM_forVGG19.py
 
 Copyright (c) 2022 Daichi Kohmoto
 Released under the MIT license
-https://github.com/barrejant/Tablet_CNN_Analysis_2022/blob/main/MIT-LICENSE
+https://github.com/barrejant/Tablet_CNN_Analysis_2022/blob/main/LICENSE

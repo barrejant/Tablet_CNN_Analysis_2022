@@ -73,5 +73,14 @@ python generating_confusion_matrices.py
 python generating_CAM_forVGG19.py 
 ```
 
-
-
+### Citing this repository via BibTeX
+```
+@software{Tablet_CNN_Analysis_2022,
+  author = {Daichi Kohmoto},
+  month = {8},
+  title = {{CNN-BASED IMAGE MODELS VERIFY A HYPOTHESIS ON TRAINING SKILLS OF WRITING CUNEIFORM TABLETS AT THE AGE OF HITTITE EMPIRE}},
+  url = {https://github.com/barrejant/Tablet_CNN_Analysis_2022/},
+  version = {1.0.0},
+  year = {2022}
+}
+```

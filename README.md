@@ -8,7 +8,7 @@ https://github.com/barrejant/Tablet_CNN_Analysis_2022/blob/main/LICENSE
 
 These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MODELS VERIFY A HYPOTHESIS ON TRAINING SKILLS OF WRITING CUNEIFORM TABLETS AT THE AGE OF HITTITE EMPIRE"*. Details for running codes are described in the below. All codes are provided under the MIT license. 
 
-## Our Working Enrionment
+## Our Working Environment
 
 
 - Ubuntu 18.04 LTS

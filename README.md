@@ -58,17 +58,17 @@ python generating_main_datasets.py
 ```
 python 
 ```
-### 5. Outputing results
+### 4. Outputing results
 
-#### 5.1. Outputing results 1: Learning curves.
+#### 4.1. Outputing results 1: Learning curves.
 ```
 python generating_learning_curves.py
 ```
-#### 5.2. Outputing results 2: Confusion matrices.
+#### 4.2. Outputing results 2: Confusion matrices.
 ```
 python generating_confusion_matrices.py 
 ```
-#### 5.3. Outputing results 3: Class activation mapping for VGG19 fine-tuned models. 
+#### 4.3. Outputing results 3: Class activation mapping for VGG19 fine-tuned models. 
 ```
 python generating_CAM_forVGG19.py 
 ```

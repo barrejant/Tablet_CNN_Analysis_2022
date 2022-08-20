@@ -76,7 +76,7 @@ python generating_CAM_forVGG19.py
 ### Citing this repository via BibTeX
 ```
 @software{Tablet_CNN_Analysis_2022,
-  author = {Daichi Kohmoto},
+  author = {Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi Matsui, Sachihiro Omura},
   month = {8},
   title = {{CNN-BASED IMAGE MODELS VERIFY A HYPOTHESIS ON TRAINING SKILLS OF WRITING CUNEIFORM TABLETS AT THE AGE OF HITTITE EMPIRE}},
   url = {https://github.com/barrejant/Tablet_CNN_Analysis_2022/},

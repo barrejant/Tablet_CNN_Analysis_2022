@@ -14,7 +14,7 @@ These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MO
 - Ubuntu 18.04 LTS
 - at least 1 GPU
 - Anaconda
-  - a virtual env: tablet_CNN_analysis_2022.yml
+  - an virtual env: tablet_CNN_analysis_2022.yml
 
 Starting by moving to working directory as 
 

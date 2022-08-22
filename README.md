@@ -16,15 +16,12 @@ These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MO
 - Anaconda
   - an virtual env: tablet_CNN_analysis_2022.yml
 
-Starting by moving to working directory as 
-
-```
-cd working_directory_path
-```
-and cloning this repository in that directory
+Starting by cloning this repository at an appropriate place in your machine
 ```
 git clone https://github.com/barrejant/Tablet_CNN_Analysis_2022.git
+cd Tablet_CNN_Analysis_2022
 ```
+and by setting the above virtual environment. 
 
 ## Notes
 

@@ -101,7 +101,7 @@ Tablet_CNN_Analysis_2022
 │   └── class_08
 ...
 </pre>
-`***`-parts will be fixed by the time you run the above script. 
+`****`-parts will be fixed by the time you run the python script `generating_main_datasets.py` contained in the above shell script. 
 
 A summary of statistics on generated datasets concerning the case of the seed `9325` is described in `Table 1` in our main paper. Following is the copy of it.   
 

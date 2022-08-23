@@ -72,7 +72,6 @@ Tablet_CNN_Analysis_2022
 </pre>
 
 ## 2. Generating 40 main datasets via data augmentation with train/test splitting.
-
 ```
 bash making_main_datasets.sh
 ```
@@ -102,6 +101,8 @@ Tablet_CNN_Analysis_2022
 │   └── class_08
 ...
 </pre>
+`***`-parts will be fixed by the time you run the above script. 
+
 A summary of statistics on generated datasets concerning the case of the seed `9325` is described in `Table 1` in our main paper. Following is the copy of it.   
 
 <img src="table1_main_paper.jpg" width="1000">

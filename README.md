@@ -81,6 +81,7 @@ As a result, our directory has the following structure:
 Tablet_CNN_Analysis_2022
 ├── raw_images
 ├── rectangular_images__n_classes_4
+├── rectangular_images__n_classes_
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 │ ├── train
 │ │ ├── class_01

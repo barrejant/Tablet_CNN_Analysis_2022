@@ -47,6 +47,9 @@ Tablet_CNN_Analysis_2022
   ├── 02.jpg
   └── 03.jpg
 </pre>
+Please verify downloaded image data by comparing them to the Figure 1 of our paper.  
+
+<img src="figure1_main_paper.jpg" width="1000">
 
 ### 1. Cropping rectangular image pieces from raw images, defining classes (4 or 8 classes).
 ```
@@ -97,9 +100,9 @@ Tablet_CNN_Analysis_2022
 │   └── class_08
 ...
 </pre>
-A summary of statistics on generated datasets is described in Table 1 in our main paper. You can check it below via a copy of the table. 
-![Table 1 of the main paper](table1_main_paper.jpg "Table 1 of the main paper")
+A summary of statistics on generated datasets concerning the case of the seed 9325 is described in Table 1 in our main paper. Following is the copy of it.   
 
+<img src="table1_main_paper.jpg" width="1000">
 
 ### 3. Fine-tuning VGG19/ResNet50/InceptionV3 pre-trained models for all main datasets.
 ```

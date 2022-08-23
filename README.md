@@ -140,6 +140,7 @@ Tablet_CNN_Analysis_2022
   ├── ****_train_accuracy.txt (a record of train accuracy for each epoch)
   └── ****_test_accuracy.txt (a record of test accuracy for each epoch)
 </pre>
+We run this code 120 times (i.e., 40 datasets x 3 image models) in total with same parameter values (except for the `gpu_id` and `data_folder`. In the following, we assume all results are stored in the above directory `FineTunedModels`. 
 
 ## 4. Outputing results
 

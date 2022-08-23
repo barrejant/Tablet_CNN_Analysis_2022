@@ -134,13 +134,11 @@ Tablet_CNN_Analysis_2022
 ├── rectangular_images__n_classes_
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 ├── ...
-├── FineTunedModels
-│ ├── train
-│ │ ├── ****.pt (the fine-tuned image model)
-│ │ ├── ****_loss.txt (a record of loss for each epoch)
-│ │ ├── ****_train_accuracy.txt (a record of train accuracy for each epoch)
-│ │ └── ****_test_accuracy.txt (a record of test accuracy for each epoch)
-│ └── test
+└── FineTunedModels
+  ├── ****.pt (the fine-tuned image model)
+  ├── ****_loss.txt (a record of loss for each epoch)
+  ├── ****_train_accuracy.txt (a record of train accuracy for each epoch)
+  └── ****_test_accuracy.txt (a record of test accuracy for each epoch)
 </pre>
 
 ## 4. Outputing results

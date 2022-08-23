@@ -117,14 +117,14 @@ A summary of statistics on generated datasets concerning the case of the seed `9
 ## 3. Fine-tuning VGG19/ResNet50/InceptionV3 pre-trained models for all main datasets.
 ```
 python FineTuningImageModel.py \
-	--gpu_id=0 \
+  --gpu_id=0 \
   --n_epochs=50 \
-	--optimizer_class='Adam' \
-	--imagemodel='vgg19' \
-	--lr_value=1e-4 \
-	--batch_size_value=16 \
+  --optimizer_class='Adam' \
+  --imagemodel='vgg19' \
+  --lr_value=1e-4 \
+  --batch_size_value=16 \
   --output_dir_name='FineTunedModels' \
-	--data_folder='__TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01'
+  --data_folder='__TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01'
 ```
 As a result, our directory has the following structure:
 <pre>

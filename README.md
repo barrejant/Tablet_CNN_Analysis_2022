@@ -14,7 +14,7 @@ These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MO
 - Ubuntu 18.04 LTS
 - at least 1 GPU
 - Anaconda
-  - an virtual env: tablet_CNN_analysis_2022.yml
+  - an virtual env: `tablet_CNN_analysis_2022.yml`
 
 Starting by cloning this repository at an appropriate place in your machine
 ```
@@ -47,7 +47,7 @@ Tablet_CNN_Analysis_2022
   ├── 02.jpg
   └── 03.jpg
 </pre>
-Please verify downloaded image data by comparing them to the Figure 1 of our paper.  
+Please verify downloaded image data by comparing them to the Figure 1 of our paper. (a),(b),and (c) correspond to `01.jpg`, `02.jpg`, and `03.jpg`, respectively.  
 
 <img src="figure1_main_paper.jpg" width="1000">
 

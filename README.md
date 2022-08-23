@@ -54,8 +54,15 @@ Please verify downloaded image data by comparing them to the `Figure 1` of our p
 
 ## 1. Cropping rectangular image pieces from raw images, defining classes (4 or 8 classes).
 ```
-python cropping_rectangular_image_pieces.py --n_classes 4 --output_dir_name rectangular_images --raw_imagedata_dir raw_images
-python cropping_rectangular_image_pieces.py --n_classes 8 --output_dir_name rectangular_images --raw_imagedata_dir raw_images
+python cropping_rectangular_image_pieces.py \
+  --n_classes 4 \
+  --output_dir_name rectangular_images \
+  --raw_imagedata_dir raw_images
+
+python cropping_rectangular_image_pieces.py \
+  --n_classes 8 \
+  --output_dir_name rectangular_images \
+  --raw_imagedata_dir raw_images
 ```
 As a result, our directory has the following structure:
 <pre>
@@ -109,8 +116,33 @@ A summary of statistics on generated datasets concerning the case of the seed `9
 
 ## 3. Fine-tuning VGG19/ResNet50/InceptionV3 pre-trained models for all main datasets.
 ```
-python 
+python FineTuningImageModel.py \
+	--gpu_id=0 \
+  --n_epochs=50 \
+	--optimizer_class='Adam' \
+	--imagemodel='vgg19' \
+	--lr_value=1e-4 \
+	--batch_size_value=16 \
+  --output_dir_name='FineTunedModels' \
+	--data_folder='__TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01'
 ```
+As a result, our directory has the following structure:
+<pre>
+Tablet_CNN_Analysis_2022
+├── raw_images
+├── rectangular_images__n_classes_4
+├── rectangular_images__n_classes_
+├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
+├── ...
+├── FineTunedModels
+│ ├── train
+│ │ ├── ****.pt (the fine-tuned image model)
+│ │ ├── ****_loss.txt (a record of loss for each epoch)
+│ │ ├── ****_train_accuracy.txt (a record of train accuracy for each epoch)
+│ │ └── ****_test_accuracy.txt (a record of test accuracy for each epoch)
+│ └── test
+</pre>
+
 ## 4. Outputing results
 
 ### 4.1. Outputing results 1: Learning curves.

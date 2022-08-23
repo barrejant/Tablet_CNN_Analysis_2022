@@ -28,7 +28,7 @@ and by setting the above virtual environment.
 - Each step (except for Step 0) depends on results of previous step. 
 - Each step automatically generates necessary directories to store results. 
 The parts of names of such directories are necessary to specify via argument parameters by yourself.
-- All images used in this study have the extension jpg.
+- All images used in this study have the extension `.jpg`.
 
 ## Steps
 
@@ -47,7 +47,7 @@ Tablet_CNN_Analysis_2022
   ├── 02.jpg
   └── 03.jpg
 </pre>
-Please verify downloaded image data by comparing them to the Figure 1 of our paper. (a),(b),and (c) correspond to `01.jpg`, `02.jpg`, and `03.jpg`, respectively.  
+Please verify downloaded image data by comparing them to the `Figure 1` of our paper. (a),(b),and (c) correspond to `01.jpg`, `02.jpg`, and `03.jpg`, respectively.  
 
 <img src="figure1_main_paper.jpg" width="1000">
 
@@ -100,7 +100,7 @@ Tablet_CNN_Analysis_2022
 │   └── class_08
 ...
 </pre>
-A summary of statistics on generated datasets concerning the case of the seed 9325 is described in Table 1 in our main paper. Following is the copy of it.   
+A summary of statistics on generated datasets concerning the case of the seed `9325` is described in `Table 1` in our main paper. Following is the copy of it.   
 
 <img src="table1_main_paper.jpg" width="1000">
 

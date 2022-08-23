@@ -1,6 +1,6 @@
 Author: Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi Matsui, Sachihiro Omura 
 
-Papers: [Main Body][Supplementary Material](not yet published)
+Papers: [Main Paper][Supplementary Material](not yet published)
 
 Copyright (c) 2022 Daichi Kohmoto  
 Released under the MIT license  
@@ -41,7 +41,7 @@ python download_raw_images_from_CTH.py --output_dir_name raw_images
 ```
 As a result, our directory has the following structure:
 <pre>
-working_directory_path
+Tablet_CNN_Analysis_2022
 └── raw_images
   ├── 01.jpg
   ├── 02.jpg
@@ -49,24 +49,57 @@ working_directory_path
 </pre>
 
 ### 1. Cropping rectangular image pieces from raw images, defining classes (4 or 8 classes).
-In the case that the number of classes is 4, the follwoing command works for our purpose:
 ```
 python cropping_rectangular_image_pieces.py --n_classes 4 --output_dir_name rectangular_images --raw_imagedata_dir raw_images
+python cropping_rectangular_image_pieces.py --n_classes 8 --output_dir_name rectangular_images --raw_imagedata_dir raw_images
 ```
 As a result, our directory has the following structure:
 <pre>
-working_directory_path
+Tablet_CNN_Analysis_2022
 ├── raw_images
-└── rectangular_images__n_classes_4
+├── rectangular_images__n_classes_4
+│ ├── class_01
+│ ├── ...
+│ └── class_04
+└── rectangular_images__n_classes_8
   ├── class_01
   ├── ...
-  └── class_04
+  └── class_08
 </pre>
 
 ### 2. Generating 40 main datasets via data augmentation with train/test splitting.
+
 ```
-python generating_main_datasets.py
+bash making_main_datasets.sh
 ```
+As a result, our directory has the following structure:
+<pre>
+Tablet_CNN_Analysis_2022
+├── raw_images
+├── rectangular_images__n_classes_4
+├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
+│ ├── train
+│ │ ├── class_01
+│ │ ├── ...
+│ │ └── class_04
+│ └── test
+│   ├── class_01
+│   ├── ...
+│   └── class_04
+├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v001
+│ ├── train
+│ │ ├── class_01
+│ │ ├── ...
+│ │ └── class_08
+│ └── test
+│   ├── class_01
+│   ├── ...
+│   └── class_08
+...
+</pre>
+A summary of statistics on generated datasets is described in Table 1 in our main paper. You can check it below via a copy of the table. 
+![Table 1 of the main paper](table1_main_paper.jpg "Table 1 of the main paper")
+
 
 ### 3. Fine-tuning VGG19/ResNet50/InceptionV3 pre-trained models for all main datasets.
 ```

@@ -142,17 +142,36 @@ Tablet_CNN_Analysis_2022
 </pre>
 We run this code 120 times (i.e., 40 datasets x 3 image models) in total with same parameter values (except for the `gpu_id` and `data_folder`. In the following, we assume all results are stored in the above directory `FineTunedModels`. 
 
-## 4. Outputing results
+## 4. Testing Other Cuniform Sentences via Fine-Tuned Models
+```
+python generating_learning_curves.py --output_dir_name 
+```
 
-### 4.1. Outputing results 1: Learning curves.
+
+## 5. Outputing results
+
+### 5.1. Outputing results 1: Learning curves.
 ```
-python generating_learning_curves.py
+python generating_learning_curves.py --output_dir_name LearningCurves
 ```
-### 4.2. Outputing results 2: Confusion matrices.
+As a result, our directory has the following structure:
+<pre>
+Tablet_CNN_Analysis_2022
+├── raw_images
+├── rectangular_images__n_classes_4
+├── rectangular_images__n_classes_
+├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
+├── ...
+├── FineTunedModels
+└── LearningCurves
+</pre>
+
+
+### 5.2. Outputing results 2: Confusion matrices.
 ```
 python generating_confusion_matrices.py 
 ```
-### 4.3. Outputing results 3: Class activation mapping for VGG19 fine-tuned models. 
+### 5.3. Outputing results 3: Class activation mapping for VGG19 fine-tuned models. 
 ```
 python generating_CAM_forVGG19.py 
 ```

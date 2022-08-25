@@ -143,10 +143,24 @@ Tablet_CNN_Analysis_2022
 We run this code 120 times (i.e., 40 datasets x 3 image models) in total with same parameter values (except for the `gpu_id` and `data_folder`. In the following, we assume all results are stored in the above directory `FineTunedModels`. 
 
 ## 4. Testing Other Cuniform Sentences via Fine-Tuned Models
+Making datasets other cuniform sentences (2 types: FrontBottom one and Side one) is done via 
 ```
-python generating_learning_curves.py --output_dir_name 
+python making_ext_test_datasets.py --mode FrontBottom --output_dir_name FrontBottom_dataset
+python making_ext_test_datasets.py --mode Side --output_dir_name Side_dataset
 ```
-
+As a result, our directory has the following structure:
+<pre>
+Tablet_CNN_Analysis_2022
+├── raw_images
+├── rectangular_images__n_classes_4
+├── rectangular_images__n_classes_
+├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
+├── ...
+├── FineTunedModels
+├── FrontBottom_dataset
+└── Side_dataset
+</pre>
+The actual test via fine-tuned models will be done in `5.2.`, together with generating confusion matrices.
 
 ## 5. Outputing results
 
@@ -163,18 +177,64 @@ Tablet_CNN_Analysis_2022
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 ├── ...
 ├── FineTunedModels
+├── FrontBottom_dataset
+├── Side_dataset
 └── LearningCurves
 </pre>
 
 
 ### 5.2. Outputing results 2: Confusion matrices.
 ```
-python generating_confusion_matrices.py 
+python generating_ConfusionMatrices_and_TestResults.py \
+  --gpu_id \
+  --output_dir_name ConfusionMatrices_and_TestResults\
+  --SideCuneiformDataset_dir Side_dataset\
+  --FrontBottomCuneiformDataset_dir FrontBottom_dataset\
+  --imagemodels_folder_name FineTunedModels
 ```
+As a result, our directory has the following structure:
+<pre>
+Tablet_CNN_Analysis_2022
+├── raw_images
+├── rectangular_images__n_classes_4
+├── rectangular_images__n_classes_
+├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
+├── ...
+├── FineTunedModels
+├── FrontBottom_dataset
+├── Side_dataset
+├── LearningCurves
+└── ConfusionMatrices_and_TestResults
+</pre>
+
+
+
+
 ### 5.3. Outputing results 3: Class activation mapping for VGG19 fine-tuned models. 
 ```
-python generating_CAM_forVGG19.py 
+python generating_CAM_results.py \
+  --gpu_id 0\
+  --output_dir_name CAM_results \
+  --TargetLayer 'features.36'\
+  --imagemodels_folder_name FineTunedModels\
+  --batch_size_value 10
 ```
+Finally, our directory has the following structure:
+<pre>
+Tablet_CNN_Analysis_2022
+├── raw_images
+├── rectangular_images__n_classes_4
+├── rectangular_images__n_classes_
+├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
+├── ...
+├── FineTunedModels
+├── FrontBottom_dataset
+├── Side_dataset
+├── LearningCurves
+├── ConfusionMatrices_and_TestResults
+└── CAM_results
+</pre>
+
 
 ## Citing this repository via BibTeX
 ```

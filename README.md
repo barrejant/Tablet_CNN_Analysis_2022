@@ -146,8 +146,12 @@ We run this code 120 times (i.e., 40 datasets x 3 image models) in total with sa
 ## 4. Testing Other Cuniform Sentences via Fine-Tuned Models
 Making datasets other cuniform sentences (2 types: `FrontBottom` type and `Side` type) for testing via fine-tuned models is done via 
 ```
-python making_ext_test_datasets.py --mode FrontBottom --output_dir_name FrontBottom_dataset
-python making_ext_test_datasets.py --mode Side --output_dir_name Side_dataset
+python making_ext_test_datasets.py \
+  --mode frontbottom \
+  --output_dir_name FrontBottom_dataset
+python making_ext_test_datasets.py \
+  --mode side \
+  --output_dir_name Side_dataset
 ```
 As a result, our working directory has the following structure:
 <pre>

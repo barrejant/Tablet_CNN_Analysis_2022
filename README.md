@@ -215,7 +215,7 @@ Tablet_CNN_Analysis_2022
 python generating_CAM_results.py \
   --gpu_id 0\
   --output_dir_name CAM_results \
-  --TargetLayer 'features.36'\
+  --VGG19_TargetFeaturesLayer_n 36\
   --imagemodels_folder_name FineTunedModels\
   --batch_size_value 10
 ```

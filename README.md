@@ -6,7 +6,7 @@ Copyright (c) 2022 Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi 
 Released under the MIT license  
 https://github.com/barrejant/Tablet_CNN_Analysis_2022/blob/main/LICENSE
 
-These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MODELS VERIFY A HYPOTHESIS ON TRAINING SKILLS OF WRITING CUNEIFORM TABLETS AT THE AGE OF HITTITE EMPIRE"*. Details for running codes are described in the below. All codes are provided under the MIT license, (mostly) following the PEP-8 style of coding. 
+These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MODELS VERIFY A HYPOTHESIS ON IMPROVEMENTS OF CUNEIFORM WRITING SKILLS AT THE AGE OF HITTITE EMPIRE"*. Details for running codes are described in the below. All codes are provided under the MIT license, (mostly) following the PEP-8 style of coding. 
 
 # Our Working Environment
 

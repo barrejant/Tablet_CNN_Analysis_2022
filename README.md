@@ -1,8 +1,8 @@
-Author: Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi Matsui, Sachihiro Omura 
+Author: Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi Matsui, Sachihiro Omura  
 
 Papers: [Main Paper (1)][Supplementary Material (2)](not yet published)
 
-Copyright (c) 2022 Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi Matsui, Sachihiro Omura 
+Copyright (c) 2022 Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi Matsui, Sachihiro Omura  
 Released under the MIT license  
 https://github.com/barrejant/Tablet_CNN_Analysis_2022/blob/main/LICENSE
 

@@ -1,12 +1,12 @@
 Author: Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi Matsui, Sachihiro Omura 
 
-Papers: [Main Paper][Supplementary Material](not yet published)
+Papers: [Main Paper (1)][Supplementary Material (2)](not yet published)
 
 Copyright (c) 2022 Daichi Kohmoto  
 Released under the MIT license  
 https://github.com/barrejant/Tablet_CNN_Analysis_2022/blob/main/LICENSE
 
-These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MODELS VERIFY A HYPOTHESIS ON TRAINING SKILLS OF WRITING CUNEIFORM TABLETS AT THE AGE OF HITTITE EMPIRE"*. Details for running codes are described in the below. All codes are provided under the MIT license, following the PEP-8 style of coding. 
+These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MODELS VERIFY A HYPOTHESIS ON TRAINING SKILLS OF WRITING CUNEIFORM TABLETS AT THE AGE OF HITTITE EMPIRE"*. Details for running codes are described in the below. All codes are provided under the MIT license, (mostly) following the PEP-8 style of coding. 
 
 # Our Working Environment
 
@@ -14,7 +14,7 @@ These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MO
 - Ubuntu 18.04 LTS
 - at least 1 GPU
 - Anaconda
-  - an virtual env: `tablet_CNN_analysis_2022.yml`
+  - an virtual env: `Tablet_CNN_Analysis_2022.yml`
 
 Starting by cloning this repository at an appropriate place in your machine
 ```
@@ -34,13 +34,13 @@ The parts of names of such directories are necessary to specify via argument par
 
 Proceed following steps one-by-one. 
 
-## 0. Prepare images from Catalog der Texte der Hethiter of Hethitologie-Portals Mainz.
+## 0. Prepare Images from Catalog der Texte der Hethiter of Hethitologie-Portals Mainz.
 
 Downloading image files from [Catalog der Texte der Hethiter of Hethitologie-Portals Mainz](https://www.hethport.uni-wuerzburg.de/CTH/) via the following:
 ```
 python download_raw_images_from_CTH.py --output_dir_name raw_images
 ```
-As a result, our directory has the following structure:
+As a result, our working directory has the following structure:
 <pre>
 Tablet_CNN_Analysis_2022
 └── raw_images
@@ -52,7 +52,7 @@ Please verify downloaded image data by comparing them to the `Figure 1` of our p
 
 <img src="figure1_main_paper.jpg" width="1000">
 
-## 1. Cropping rectangular image pieces from raw images, defining classes (4 or 8 classes).
+## 1. Cropping Rectangular Image Pieces from Raw Images, Defining Classes (4 or 8 Classes).
 ```
 python cropping_rectangular_image_pieces.py \
   --n_classes 4 \
@@ -64,7 +64,7 @@ python cropping_rectangular_image_pieces.py \
   --output_dir_name rectangular_images \
   --raw_imagedata_dir raw_images
 ```
-As a result, our directory has the following structure:
+Now, our working directory has the following structure:
 <pre>
 Tablet_CNN_Analysis_2022
 ├── raw_images
@@ -78,11 +78,11 @@ Tablet_CNN_Analysis_2022
   └── class_08
 </pre>
 
-## 2. Generating 40 main datasets via data augmentation with train/test splitting.
+## 2. Generating 40 Main Datasets via Data Augmentation with Train/Test Splitting.
 ```
 bash making_main_datasets.sh
 ```
-As a result, our directory has the following structure:
+As a result, our working directory has the following structure:
 <pre>
 Tablet_CNN_Analysis_2022
 ├── raw_images
@@ -114,7 +114,7 @@ A summary of statistics on generated datasets concerning the case of the seed `9
 
 <img src="table1_main_paper.jpg" width="1000">
 
-## 3. Fine-tuning VGG19/ResNet50/InceptionV3 pre-trained models for all main datasets.
+## 3. Fine-tuning VGG19/ResNet50/InceptionV3 Pre-Trained Models for All Main Datasets.
 ```
 python FineTuningImageModel.py \
   --gpu_id 0\
@@ -126,7 +126,7 @@ python FineTuningImageModel.py \
   --output_dir_name 'FineTunedModels'\
   --data_folder '__TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01'
 ```
-As a result, our directory has the following structure:
+It turns out that our working directory has the following structure:
 <pre>
 Tablet_CNN_Analysis_2022
 ├── raw_images
@@ -140,15 +140,16 @@ Tablet_CNN_Analysis_2022
   ├── ****_train_accuracy.txt (a record of train accuracy for each epoch)
   └── ****_test_accuracy.txt (a record of test accuracy for each epoch)
 </pre>
-We run this code 120 times (i.e., 40 datasets x 3 image models) in total with same parameter values (except for the `gpu_id` and `data_folder`. In the following, we assume all results are stored in the above directory `FineTunedModels`. 
+We run this code 120 times (i.e., 40 datasets x 3 image models) in total with same parameter values (except for the `gpu_id` and `data_folder`. In the following, we assume all results are stored in the above same directory `FineTunedModels`. 
+
 
 ## 4. Testing Other Cuniform Sentences via Fine-Tuned Models
-Making datasets other cuniform sentences (2 types: FrontBottom one and Side one) is done via 
+Making datasets other cuniform sentences (2 types: `FrontBottom` type and `Side` type) for testing via fine-tuned models is done via 
 ```
 python making_ext_test_datasets.py --mode FrontBottom --output_dir_name FrontBottom_dataset
 python making_ext_test_datasets.py --mode Side --output_dir_name Side_dataset
 ```
-As a result, our directory has the following structure:
+As a result, our working directory has the following structure:
 <pre>
 Tablet_CNN_Analysis_2022
 ├── raw_images
@@ -162,13 +163,17 @@ Tablet_CNN_Analysis_2022
 </pre>
 The actual test via fine-tuned models will be done in `5.2.`, together with generating confusion matrices.
 
-## 5. Outputing results
 
-### 5.1. Outputing results 1: Learning curves.
+## 5. Outputing Results
+
+All figures listed in (1) and (2) will be obtained by proceeding the following steps. We noted corresponding (sub)sections in (1) & (2) for each step. 
+
+### 5.1. Outputing Results 1: Learning Curves.
+Correspnding (sub)sections: Section `A` in (2)
 ```
 python generating_learning_curves.py --output_dir_name LearningCurves
 ```
-As a result, our directory has the following structure:
+Currently, our working directory has the following structure:
 <pre>
 Tablet_CNN_Analysis_2022
 ├── raw_images
@@ -183,7 +188,10 @@ Tablet_CNN_Analysis_2022
 </pre>
 
 
-### 5.2. Outputing results 2: Confusion matrices.
+### 5.2. Outputing Results 2: Confusion matrices and Testing Other Cuniform Sentences.
+Correspnding (sub)sections: 
+- [Confusion Matrices] Subsection `3.2` in (1) & Section `B` in (2), 
+- [Testing] Subsection `3.4` in (1) & Section `C` and `D` in (2)
 ```
 python generating_ConfusionMatrices_and_TestResults.py \
   --gpu_id \
@@ -192,7 +200,7 @@ python generating_ConfusionMatrices_and_TestResults.py \
   --FrontBottomCuneiformDataset_dir FrontBottom_dataset\
   --imagemodels_folder_name FineTunedModels
 ```
-As a result, our directory has the following structure:
+After running this code, our working directory has the following structure:
 <pre>
 Tablet_CNN_Analysis_2022
 ├── raw_images
@@ -206,11 +214,11 @@ Tablet_CNN_Analysis_2022
 ├── LearningCurves
 └── ConfusionMatrices_and_TestResults
 </pre>
+In (1), only the results of overall cases are listed. 
 
 
-
-
-### 5.3. Outputing results 3: Class activation mapping for VGG19 fine-tuned models. 
+### 5.3. Outputing Results 3: Class Activation Mapping for VGG19 Fine-Tuned Models. 
+Correspnding (sub)sections: Subsection `3.3` in (1) & Section `E` in (2)
 ```
 python generating_CAM_results.py \
   --gpu_id 0\
@@ -219,7 +227,7 @@ python generating_CAM_results.py \
   --imagemodels_folder_name FineTunedModels\
   --batch_size_value 10
 ```
-Finally, our directory has the following structure:
+Finally, our working directory has the following structure:
 <pre>
 Tablet_CNN_Analysis_2022
 ├── raw_images

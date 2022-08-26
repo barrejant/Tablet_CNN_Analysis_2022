@@ -166,10 +166,10 @@ The actual test via fine-tuned models will be done in `5.2.`, together with gene
 
 ## 5. Outputing Results
 
-All figures listed in (1) and (2) will be obtained by proceeding the following steps. We noted corresponding (sub)sections in (1) & (2) for each step. 
+All figures listed in (1) and (2) will be obtained by proceeding the following steps. We noted *corresponding (sub)sections in (1) & (2)* for each step. 
 
 ### 5.1. Outputing Results 1: Learning Curves.
-Correspnding (sub)sections: Section `A` in (2)
+*Correspnding (sub)sections:* Section `A` in (2)
 ```
 python generating_learning_curves.py --output_dir_name LearningCurves
 ```
@@ -189,7 +189,7 @@ Tablet_CNN_Analysis_2022
 
 
 ### 5.2. Outputing Results 2: Confusion matrices and Testing Other Cuniform Sentences.
-Correspnding (sub)sections: 
+*Correspnding (sub)sections:*
 - [Confusion Matrices] Subsection `3.2` in (1) & Section `B` in (2), 
 - [Testing] Subsection `3.4` in (1) & Section `C` and `D` in (2)
 ```
@@ -218,7 +218,7 @@ In (1), only the results of overall cases are listed.
 
 
 ### 5.3. Outputing Results 3: Class Activation Mapping for VGG19 Fine-Tuned Models. 
-Correspnding (sub)sections: Subsection `3.3` in (1) & Section `E` in (2)
+*Correspnding (sub)sections:* Subsection `3.3` in (1) & Section `E` in (2)
 ```
 python generating_CAM_results.py \
   --gpu_id 0\

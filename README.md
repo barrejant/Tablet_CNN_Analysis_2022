@@ -135,10 +135,10 @@ Tablet_CNN_Analysis_2022
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 ├── ...
 └── FineTunedModels
-  ├── ****.pt (the fine-tuned image model)
-  ├── ****_loss.txt (a record of loss for each epoch)
-  ├── ****_train_accuracy.txt (a record of train accuracy for each epoch)
-  └── ****_test_accuracy.txt (a record of test accuracy for each epoch)
+  ├── *****.pt (the fine-tuned image model)
+  ├── *****_loss.txt (a record of loss for each epoch)
+  ├── *****_train_accuracy.txt (a record of train accuracy for each epoch)
+  └── *****_test_accuracy.txt (a record of test accuracy for each epoch)
 </pre>
 We run this code 120 times (i.e., 40 datasets x 3 image models) in total with same parameter values (except for the `gpu_id` and `data_folder`. In the following, we assume all results are stored in the above same directory `FineTunedModels`. 
 

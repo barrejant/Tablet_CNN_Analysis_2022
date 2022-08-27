@@ -253,7 +253,7 @@ Tablet_CNN_Analysis_2022
 @software{Tablet_CNN_Analysis_2022,
   author = {Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi Matsui, Sachihiro Omura},
   month = {8},
-  title = {{CNN-BASED IMAGE MODELS VERIFY A HYPOTHESIS ON TRAINING SKILLS OF WRITING CUNEIFORM TABLETS AT THE AGE OF HITTITE EMPIRE}},
+  title = {{CNN-BASED IMAGE MODELS VERIFY A HYPOTHESIS ON IMPROVEMENTS OF CUNEIFORM WRITING SKILLS AT THE AGE OF HITTITE EMPIRE}},
   url = {https://github.com/barrejant/Tablet_CNN_Analysis_2022/},
   version = {1.0.0},
   year = {2022}

@@ -195,7 +195,7 @@ Tablet_CNN_Analysis_2022
 ### 5.2. Outputing Results 2: Confusion matrices and Testing Other Cuniform Sentences.
 *Correspnding (sub)sections:*
 - [Confusion Matrices] Subsection `3.2` in (1) & Section `B` in (2), 
-- [Testing] Subsection `3.4` in (1) & Section `C` and `D` in (2)
+- [Testing] Subsection `3.4` in (1) & Section `D` and `E` in (2)
 ```
 python generating_ConfusionMatrices_and_TestResults.py \
   --gpu_id 0\
@@ -222,7 +222,7 @@ In (1), only the results of overall cases are listed.
 
 
 ### 5.3. Outputing Results 3: Class Activation Mapping for VGG19 Fine-Tuned Models. 
-*Correspnding (sub)sections:* Subsection `3.3` in (1) & Section `E` in (2)
+*Correspnding (sub)sections:* Subsection `3.3` in (1) & Section `C` in (2)
 ```
 python generating_CAM_results.py \
   --gpu_id 0\

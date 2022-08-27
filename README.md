@@ -15,7 +15,7 @@ These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MO
 - at least 1 GPU
 - ~ 5GB disk storage
 - Anaconda
-  - an virtual env: `Tablet_CNN_Analysis_2022.yml`
+  - an virtual env: [Tablet_CNN_Analysis_2022.yml](./Tablet_CNN_Analysis_2022.yml)
 
 Starting by cloning this repository at an appropriate place in your machine
 ```

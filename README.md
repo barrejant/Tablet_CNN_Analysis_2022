@@ -13,6 +13,7 @@ These codes are provided to reproduce results of our study, *"CNN-BASED IMAGE MO
 
 - Ubuntu 18.04 LTS
 - at least 1 GPU
+- ~ 5GB disk storage
 - Anaconda
   - an virtual env: `Tablet_CNN_Analysis_2022.yml`
 

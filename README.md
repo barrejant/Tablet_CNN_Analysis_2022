@@ -170,7 +170,7 @@ The actual test via fine-tuned models will be done in `5.2.`, together with gene
 
 ## 5. Outputing Results
 
-All figures listed in (1) and (2) will be obtained by proceeding the following steps. We noted *corresponding (sub)sections in (1) & (2)* for each step. 
+All figures listed in (1) and (2) will be obtained by proceeding the following steps. We note *corresponding (sub)sections in (1) & (2)* for each step. 
 
 ### 5.1. Outputing Results 1: Learning Curves.
 *Correspnding (sub)sections:* Section `A` in (2)

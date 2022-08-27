@@ -232,7 +232,7 @@ python generating_CAM_results.py \
   --imagemodels_folder_name FineTunedModels\
   --batch_size_value 10
 ```
-Finally, our working directory has the following structure:
+It will take a few hours to finish outputing all results. Finally, our working directory has the following structure:
 <pre>
 Tablet_CNN_Analysis_2022
 ├── raw_images

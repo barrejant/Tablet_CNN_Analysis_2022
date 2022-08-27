@@ -223,7 +223,7 @@ In (1), only the results of overall cases are listed.
 
 
 ### 5.3. Outputing Results 3: Class Activation Mapping for VGG19 Fine-Tuned Models.
-Here, we borrow three implementations of CAMs from [pytorch-grad-cam](https://github.com/jacobgil/pytorch-grad-cam): Grad-CAM, Eigen-CAM, and Layer-CAM 
+Here, we borrow some codes from [pytorch-grad-cam](https://github.com/jacobgil/pytorch-grad-cam) on Grad-CAM, Eigen-CAM, and Layer-CAM 
 *Correspnding (sub)sections:* Subsection `3.3` in (1) & Section `C` in (2).  
 ```
 python generating_CAM_results.py \

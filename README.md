@@ -141,7 +141,7 @@ Tablet_CNN_Analysis_2022
   ├── *****_train_accuracy.txt (a record of train accuracy for each epoch)
   └── *****_test_accuracy.txt (a record of test accuracy for each epoch)
 </pre>
-`*****`-part is automatically determined by this code. We run this code `120` times (i.e., `40` datasets x `3` image models) in total with same parameter values (except for the `gpu_id` and `data_folder`. In the following, we assume all results are stored in the above same directory `FineTunedModels`. 
+`*****`-part is automatically determined by this code. We run this code `120` times (i.e., `40` datasets x `3` image models) in total with same parameter values (except for the `gpu_id` and `data_folder`. This will take 1~3 days via 4 GPUs, depending on their amounts of VRAM. In the following, we assume all results are stored in the above same directory `FineTunedModels`. 
 
 
 ## 4. Testing Other Cuniform Sentences via Fine-Tuned Models

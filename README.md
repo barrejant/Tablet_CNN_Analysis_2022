@@ -87,7 +87,7 @@ As a result, our working directory has the following structure:
 Tablet_CNN_Analysis_2022
 ├── raw_images
 ├── rectangular_images__n_classes_4
-├── rectangular_images__n_classes_
+├── rectangular_images__n_classes_8
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 │ ├── train
 │ │ ├── class_01
@@ -131,7 +131,7 @@ It turns out that our working directory has the following structure:
 Tablet_CNN_Analysis_2022
 ├── raw_images
 ├── rectangular_images__n_classes_4
-├── rectangular_images__n_classes_
+├── rectangular_images__n_classes_8
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 ├── ...
 └── FineTunedModels
@@ -158,7 +158,7 @@ As a result, our working directory has the following structure:
 Tablet_CNN_Analysis_2022
 ├── raw_images
 ├── rectangular_images__n_classes_4
-├── rectangular_images__n_classes_
+├── rectangular_images__n_classes_8
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 ├── ...
 ├── FineTunedModels
@@ -182,7 +182,7 @@ Currently, our working directory has the following structure:
 Tablet_CNN_Analysis_2022
 ├── raw_images
 ├── rectangular_images__n_classes_4
-├── rectangular_images__n_classes_
+├── rectangular_images__n_classes_8
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 ├── ...
 ├── FineTunedModels
@@ -198,7 +198,7 @@ Tablet_CNN_Analysis_2022
 - [Testing] Subsection `3.4` in (1) & Section `C` and `D` in (2)
 ```
 python generating_ConfusionMatrices_and_TestResults.py \
-  --gpu_id \
+  --gpu_id 0\
   --output_dir_name ConfusionMatrices_and_TestResults\
   --SideCuneiformDataset_dir Side_dataset\
   --FrontBottomCuneiformDataset_dir FrontBottom_dataset\
@@ -209,7 +209,7 @@ After running this code, our working directory has the following structure:
 Tablet_CNN_Analysis_2022
 ├── raw_images
 ├── rectangular_images__n_classes_4
-├── rectangular_images__n_classes_
+├── rectangular_images__n_classes_8
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 ├── ...
 ├── FineTunedModels
@@ -236,7 +236,7 @@ Finally, our working directory has the following structure:
 Tablet_CNN_Analysis_2022
 ├── raw_images
 ├── rectangular_images__n_classes_4
-├── rectangular_images__n_classes_
+├── rectangular_images__n_classes_8
 ├── __TrainTestRatio__0.8__CutSize__60__seed__2201__TrashTHRatio__1.0main_datasets_****__DataSetType__v01
 ├── ...
 ├── FineTunedModels

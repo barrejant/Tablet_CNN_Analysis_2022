@@ -1,3 +1,5 @@
+Title: CNN-based Image Models Verify a Hypothesis that The Writers of Cuneiform Texts Improved Their Writing Skills When Studying at the Age of Hittite Empire
+
 Author: Daichi Kohmoto, Katsutoshi Fukuda, Daisuke Yoshida, Takafumi Matsui, Sachihiro Omura  
 
 Papers: [Main Paper (1)](https://arxiv.org/abs/2505.06974) & [Supplementary Material (2)](./SupplMaterial_KFYMO_light.pdf)
